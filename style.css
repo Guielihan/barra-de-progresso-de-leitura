@@ -1,0 +1,174 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #5865F2; /* Cor Discord / Azul moderno */
+    --primary-hover: #4752C4;
+    --text-color: #333333;
+    --bg-color: #F9FAFB;
+    --heading-color: #111827;
+    --bar-height: 6px;
+    --bar-color: linear-gradient(90deg, #5865F2, #9C42F5); /* Gradiente bonito */
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.8;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    -webkit-font-smoothing: antialiased; /* Suavização de fonte */
+}
+
+/* Container da Barra de Progresso */
+.progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--bar-height);
+    background: transparent;
+    z-index: 9999; /* Prioridade máxima */
+    pointer-events: none; /* Não atrapalha cliques */
+}
+
+/* A Barra de Progresso em si */
+.progress-bar {
+    height: 100%;
+    background: var(--bar-color);
+    width: 0%;
+    border-radius: 0 4px 4px 0; /* Leve arredondamento na ponta */
+    box-shadow: 0 0 10px rgba(88, 101, 242, 0.5); /* Glow suave */
+    transition: width 0.1s linear; /* Animação super sutil para não ficar travada */
+}
+
+/* Layout Principal */
+.content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px; /* Padding top suficiente */
+}
+
+/* Tipografia e Espaçamento */
+header {
+    text-align: center;
+    margin-bottom: 60px;
+    padding-top: 40px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: #6B7280;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+blockquote {
+    font-style: italic;
+    background: #E5E7EB;
+    border-left: 4px solid #9CA3AF;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border-radius: 0 8px 8px 0;
+    color: #4B5563;
+}
+
+ul {
+    margin: 1.5rem 0 1.5rem 2rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Rodapé */
+footer {
+    border-top: 1px solid #E5E7EB;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    text-align: center;
+    color: #9CA3AF;
+    font-size: 0.9rem;
+}
+
+/* Botão Flutuante Discord */
+.discord-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.discord-float:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(88, 101, 242, 0.4);
+}
+
+.discord-float img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    /* Caso o SVG original não seja branco, podemos forçar com filter */
+    filter: brightness(0) invert(1); 
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .content-wrapper {
+        padding: 40px 20px;
+    }
+
+    .discord-float {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .discord-float img {
+        width: 28px;
+        height: 28px;
+    }
+}
