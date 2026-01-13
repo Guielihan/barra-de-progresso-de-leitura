@@ -1,4 +1,3 @@
-/* Reset Básico */
 * {
     margin: 0;
     padding: 0;
@@ -6,13 +5,13 @@
 }
 
 :root {
-    --primary-color: #5865F2; /* Cor Discord / Azul moderno */
+    --primary-color: #5865F2; 
     --primary-hover: #4752C4;
     --text-color: #333333;
     --bg-color: #F9FAFB;
     --heading-color: #111827;
     --bar-height: 6px;
-    --bar-color: linear-gradient(90deg, #5865F2, #9C42F5); /* Gradiente bonito */
+    --bar-color: linear-gradient(90deg, #5865F2, #9C42F5); 
 }
 
 body {
@@ -20,10 +19,9 @@ body {
     line-height: 1.8;
     color: var(--text-color);
     background-color: var(--bg-color);
-    -webkit-font-smoothing: antialiased; /* Suavização de fonte */
+    -webkit-font-smoothing: antialiased; 
 }
 
-/* Container da Barra de Progresso */
 .progress-container {
     position: fixed;
     top: 0;
@@ -31,28 +29,25 @@ body {
     width: 100%;
     height: var(--bar-height);
     background: transparent;
-    z-index: 9999; /* Prioridade máxima */
-    pointer-events: none; /* Não atrapalha cliques */
+    z-index: 9999; 
+    pointer-events: none; 
 }
 
-/* A Barra de Progresso em si */
 .progress-bar {
     height: 100%;
     background: var(--bar-color);
     width: 0%;
-    border-radius: 0 4px 4px 0; /* Leve arredondamento na ponta */
-    box-shadow: 0 0 10px rgba(88, 101, 242, 0.5); /* Glow suave */
-    transition: width 0.1s linear; /* Animação super sutil para não ficar travada */
+    border-radius: 0 4px 4px 0; 
+    box-shadow: 0 0 10px rgba(88, 101, 242, 0.5);
+    transition: width 0.1s linear; 
 }
 
-/* Layout Principal */
 .content-wrapper {
     max-width: 800px;
     margin: 0 auto;
-    padding: 60px 20px; /* Padding top suficiente */
+    padding: 60px 20px; 
 }
 
-/* Tipografia e Espaçamento */
 header {
     text-align: center;
     margin-bottom: 60px;
@@ -107,7 +102,7 @@ li {
     margin-bottom: 0.5rem;
 }
 
-/* Rodapé */
+/* rodapé */
 footer {
     border-top: 1px solid #E5E7EB;
     margin-top: 4rem;
@@ -117,7 +112,7 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Botão Flutuante Discord */
+/* botão discord */
 .discord-float {
     position: fixed;
     bottom: 30px;
@@ -146,11 +141,10 @@ footer {
     width: 35px;
     height: 35px;
     object-fit: contain;
-    /* Caso o SVG original não seja branco, podemos forçar com filter */
     filter: brightness(0) invert(1); 
 }
 
-/* Responsividade */
+/* responsividade */
 @media (max-width: 600px) {
     h1 {
         font-size: 2rem;
