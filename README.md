@@ -70,10 +70,10 @@ barra-de-progresso-de-leitura/
 ## 📸 Capturas de Tela
 
 ### Página Inicial
-<img src="assets/screenshots/screenshot-inicial.png" alt="Página Inicial" width="100%" style="border-radius: 8px; margin: 20px 0;">
+![Página Inicial](assets/screenshots/screenshot-inicial.png)
 
 ### Com Barra de Progresso Preenchida
-<img src="assets/screenshots/screenshot-com-progresso.png" alt="Barra de Progresso" width="100%" style="border-radius: 8px; margin: 20px 0;">
+![Barra de Progresso](assets/screenshots/screenshot-progresso.png)
 
 ---
 
